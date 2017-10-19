@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="EjbCavardage:ejb exploded">
+    <output-path>$PROJECT_DIR$/target/EjbCavardage-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="EjbCavardage/ejb/EJB" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Documents/Travail/AAR/Projet/aar_m2/projet/a_tester/EjbCavardage/target/EjbCavardage-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="EjbCavardage" />
+    </root>
+  </artifact>
+</component>
