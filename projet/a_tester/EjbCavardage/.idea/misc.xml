@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="ejb" url="file://$USER_HOME$/Documents/Travail/AAR/Projet/aar_m2/projet/a_tester/EjbCavardage" />
+    <file type="ejb" url="file://$PROJECT_DIR$" />
+    <file type="ejb" url="file://$PROJECT_DIR$/../../../../../../../../Travail/AAR/Projet/aar_m2/projet/a_tester/EjbCavardage" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

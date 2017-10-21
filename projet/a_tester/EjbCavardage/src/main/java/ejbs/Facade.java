@@ -1,5 +1,7 @@
 package ejbs;
 
+import entities.*;
+
 import javax.ejb.Local;
 import java.util.Date;
 import java.util.List;
@@ -18,9 +20,9 @@ public interface Facade {
 
     public List<Ville> getVillesDeserviees();
 
-    public List<Offres> getOffresEnCours();
+    public List<Offre> getOffresEnCours();
 
-    public void addReservation(String login, Offres offre);
+    public void addReservation(String login, Offre offre);
 
     //voir comment réduire la fonction
     //list de prix = etapes + 1
@@ -28,13 +30,13 @@ public interface Facade {
                          Ville depart, Date dateDepart,
                          Ville arrive, Date dateArrive,
                          List<Ville> etapes, List<Date> dateEtapes,
-                         List<float> prix);
+                         List<Float> prix);
 
     public int prixMoyen(Ville depart, Ville arrive);
 
-    public List<Float> prixParEtapes(Offres offre);
+    public List<Float> prixParEtapes(Offre offre);
 
-    public List<Ville> etapesDArrivees(Offres offre);
+    public List<Ville> etapesDArrivees(Offre offre);
 
     public List<Demande> demandeEnCours(String login);
 
@@ -42,9 +44,9 @@ public interface Facade {
 
     public void addCommentaire(String login, Utilisateur utilisateur, String message, int etoile);
 
-    public List<Commentaires> getCommentaire(String login);
+    public List<Commentaire> getCommentaire(String login);
 
-    public void annulation(String login, Offres offre);
+    public void annulation(String login, Offre offre);
 
     public int getInscrit();
 
