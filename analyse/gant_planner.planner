@@ -46,18 +46,54 @@
       <task id="2" name="Mise au point" note="" work="7200" start="20171017T000000Z" end="20171017T083000Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
       <task id="3" name="Git et Diagramme de gant" note="" work="3600" duration="0" start="20171017T000000Z" end="20171017T080000Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
     </task>
-    <task id="4" name="Initialisation et ejb" note="" work="9000" start="20171017T000000Z" end="20171019T080002Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="5" name="cr&#xE9;ation projet" note="" work="1800" duration="108000" start="20171017T000000Z" end="20171019T080002Z" work-start="20171017T080000Z" percent-complete="0" priority="9999" type="normal" scheduling="fixed-duration"/>
-      <task id="6" name="uml des classes en dia" note="" work="3600" duration="108000" start="20171017T000000Z" end="20171019T080002Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
-      <task id="7" name="interface et fonctions" note="" work="3600" duration="108000" start="20171017T000000Z" end="20171019T080002Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    <task id="4" name="Initialisation et ejb" note="" work="9000" start="20171017T000000Z" end="20171019T080200Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="5" name="cr&#xE9;ation projet" note="" work="1800" duration="108000" start="20171017T000000Z" end="20171019T080200Z" work-start="20171017T080000Z" percent-complete="0" priority="9999" type="normal" scheduling="fixed-duration"/>
+      <task id="6" name="uml des classes en dia" note="" work="3600" duration="108000" start="20171017T000000Z" end="20171019T080200Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="7" name="interface et fonctions" note="" work="3600" duration="108000" start="20171017T000000Z" end="20171019T080200Z" work-start="20171017T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
     </task>
-    <task id="8" name="Entities" note="" work="21600" start="20171019T080002Z" end="20171021T150004Z" work-start="20171019T080002Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+    <task id="8" name="Entities" note="" work="21600" start="20171019T080200Z" end="20171021T150400Z" work-start="20171019T080200Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
       <predecessors>
         <predecessor id="1" predecessor-id="4" type="FS"/>
       </predecessors>
-      <task id="9" name="classe commentaire et union utilisateur + insert" note="" work="7200" duration="129600" start="20171019T080002Z" end="20171021T150004Z" work-start="20171019T080002Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
-      <task id="10" name="classe utilisateur et union offre + insert" note="" work="7200" duration="129600" start="20171019T080002Z" end="20171021T150004Z" work-start="20171019T080002Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
-      <task id="11" name="classe offre et ville deservie et vehicule + insert" note="" work="7200" duration="129600" start="20171019T080002Z" end="20171021T150004Z" work-start="20171019T080002Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="9" name="classe commentaire et union utilisateur + insert" note="" work="7200" duration="129600" start="20171019T080200Z" end="20171021T150400Z" work-start="20171019T080200Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="10" name="classe utilisateur et union offre + insert" note="" work="7200" duration="129600" start="20171019T080200Z" end="20171021T150400Z" work-start="20171019T080200Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+      <task id="11" name="classe offre et ville deservie et vehicule + insert" note="" work="7200" duration="129600" start="20171019T080200Z" end="20171021T150400Z" work-start="20171019T080200Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration"/>
+    </task>
+    <task id="12" name="Groupe organisation" note="" work="7200" start="20171024T000000Z" end="20171024T100000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="13" name="Mise au point et analyse fonctionnalit&#xE9;s" note="" work="7200" duration="7200" start="20171024T000000Z" end="20171024T100000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+    </task>
+    <task id="14" name="Mise a jour" note="" work="13200" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="15" name="Mise a jour des attributs" note="" work="1800" duration="28800" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="16" name="Mise en place de controleurs et facades diff&#xE9;r&#xE9;s" note="" work="600" duration="28800" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="17" name="Gant et diagramme de classe" note="" work="3600" duration="28800" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="18" name="Diagramme de fonctionnalit&#xE9;s" note="" work="3600" duration="28800" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="19" name="Tests entities" note="" work="3600" duration="28800" start="20171024T000000Z" end="20171024T170000Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+    </task>
+    <task id="20" name="Fonctionnalit&#xE9;s" note="" work="21600" start="20171024T000000Z" end="20171026T100200Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="21" name="RefuserDemande, AccepterDemande" note="" work="3600" duration="115200" start="20171024T000000Z" end="20171026T100200Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="22" name="ConsulterProfil, listeOffresUtilisateurs" note="" work="3600" duration="115200" start="20171024T000000Z" end="20171026T100200Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="23" name="ConsulterOffre, creerOffre, modifierOffre" note="" work="7200" duration="115200" start="20171024T000000Z" end="20171026T100200Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
+      <task id="24" name="EvaluerConducteur,  InscriptionOffre, Reservation offre" note="" work="7200" duration="115200" start="20171024T000000Z" end="20171026T100200Z" work-start="20171024T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-duration">
+        <constraint type="must-start-on" time="20171024T000000Z"/>
+      </task>
     </task>
   </tasks>
   <resource-groups/>
@@ -68,13 +104,35 @@
     <resource id="4" name="Thibault" short-name="" type="1" units="0" email="" note="" std-rate="0" calendar="2"/>
   </resources>
   <allocations>
+    <allocation task-id="19" resource-id="1" units="3"/>
+    <allocation task-id="21" resource-id="1" units="3"/>
+    <allocation task-id="17" resource-id="1" units="13"/>
+    <allocation task-id="16" resource-id="1" units="1"/>
+    <allocation task-id="15" resource-id="1" units="2"/>
+    <allocation task-id="13" resource-id="1" units="25"/>
     <allocation task-id="3" resource-id="1" units="100"/>
     <allocation task-id="2" resource-id="1" units="100"/>
     <allocation task-id="11" resource-id="1" units="6"/>
+    <allocation task-id="22" resource-id="2" units="3"/>
+    <allocation task-id="19" resource-id="2" units="3"/>
+    <allocation task-id="18" resource-id="2" units="13"/>
+    <allocation task-id="16" resource-id="2" units="1"/>
+    <allocation task-id="15" resource-id="2" units="2"/>
+    <allocation task-id="13" resource-id="2" units="25"/>
     <allocation task-id="2" resource-id="2" units="100"/>
     <allocation task-id="10" resource-id="2" units="6"/>
+    <allocation task-id="19" resource-id="3" units="3"/>
+    <allocation task-id="24" resource-id="3" units="6"/>
+    <allocation task-id="16" resource-id="3" units="1"/>
+    <allocation task-id="15" resource-id="3" units="2"/>
+    <allocation task-id="13" resource-id="3" units="25"/>
     <allocation task-id="2" resource-id="3" units="100"/>
     <allocation task-id="9" resource-id="3" units="6"/>
+    <allocation task-id="19" resource-id="4" units="3"/>
+    <allocation task-id="23" resource-id="4" units="6"/>
+    <allocation task-id="16" resource-id="4" units="1"/>
+    <allocation task-id="15" resource-id="4" units="2"/>
+    <allocation task-id="13" resource-id="4" units="25"/>
     <allocation task-id="2" resource-id="4" units="100"/>
     <allocation task-id="7" resource-id="4" units="3"/>
     <allocation task-id="6" resource-id="4" units="3"/>

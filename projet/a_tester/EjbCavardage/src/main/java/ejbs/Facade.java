@@ -9,16 +9,33 @@ import java.util.List;
 @Local
 public interface Facade {
 
-    //?
-    public void login(String login, String password);
+    //FAIT
+    public Utilisateur login(String login, String password);
 
+    //FAIT
     public void logout();
 
-    public void inscrition(String login, String password, Utilisateur utilisateur);
 
-    public String getCourantUtilisateur(String login);
+    //SI j'ai bien compris c'est l'inscription sur le site??
+    //Si c'est le cas je me permet de modifier la fonction je l'a laisse en commentaire
+    //public void inscription(String login, String password, Utilisateur utilisateur);
+    //FAIT
+    public Utilisateur inscription(String login, String pass, String name, String firstName);
 
-    public List<Ville> getVillesDeserviees();
+    /**
+     * Vérifier lors de l'inscription qu'un utilisateur n'a pas deja le même login ou mot de passe
+     * @param login
+     * @param userPass
+     * @return retourne false si le login ou mot de passe est déjà pris
+     */
+
+    public boolean verificationInscriptionDoublon(String login, String userPass);
+
+
+    //FAIT
+    public Utilisateur getUtilisateur(String login);
+
+    public List<Ville> getVillesDeserviees(int id_offre);
 
     public List<Offre> getOffresEnCours();
 
@@ -42,13 +59,20 @@ public interface Facade {
 
     public void reponseDemande(String login, Demande demande);
 
-    public void addCommentaire(String login, Utilisateur utilisateur, String message, int etoile);
+    //src et dest sont des logins
+    //FAIT
+    public void addCommentaire(String src, String dest, String message, int etoile);
 
-    public List<Commentaire> getCommentaire(String login);
+    //FAIT
+    public List<Commentaire> getSentComments(String login);
+
+    //FAIT
+    public List<Commentaire> getRecieveComment(String login);
 
     public void annulation(String login, Offre offre);
 
-    public int getInscrit();
+    //FAIT
+    public List<Utilisateur> getInscrits();
 
     public int getNbOffres();
 
@@ -60,6 +84,5 @@ public interface Facade {
     public void removeGabarits(String login, String gabarit);
     public void addVilleDeservies(String login, String ville);
     public void removeVilleDeservies(String login, String ville);
-
 
 }

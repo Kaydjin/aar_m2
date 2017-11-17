@@ -1,45 +1,82 @@
 package entities;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.*;
+
+import static javax.persistence.FetchType.EAGER;
 
 @Entity
 public class Offre {
 
-    @Id @GeneratedValue
-    private int idOffre;
-    private int nbrRestants;
-
+    @OneToMany (mappedBy = "offre")
+    private List<Demande> demandes;
     @ManyToOne
     private Ville depart;
     @ManyToOne
-    private Ville arrive;
+    private Ville arrivee;
+    @ManyToOne
     private Vehicule vehicule;
+    @ManyToOne
+    private Utilisateur emetteur;
     @ManyToMany
     private List<Ville> etapes;
-    private Utilisateur emmeteur;
-    private Float tarif;
 
-    /**
-     * J'ai mis les attributs mais j'ai pas géré les
-     * manytoone ...etc pour les liens entre offre et
-     * utilisateur.
-     *
-     */
-    public int getIdOffre() {
-        return idOffre;
+    @ElementCollection(fetch=EAGER)
+    private Set<Float> tarif;
+    private float tarif_complet;
+
+    @ElementCollection(fetch=EAGER)
+    private Set<Date> horaire;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date horaire_depart;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date horaire_arrivee;
+
+
+    @Id @GeneratedValue
+    private int id_offre;
+    private int limite_places;
+    private boolean voyage_partitionner;
+    @Temporal(TemporalType.DATE)
+    private Date date;
+
+    public Offre() {
+        etapes = new ArrayList<>();
+        demandes = new ArrayList<>();
+        tarif = new HashSet<>();
+        horaire = new HashSet<>();
     }
 
-    public void setIdOffre(int idOffre) {
-        this.idOffre = idOffre;
+    public Offre(Ville depart, Ville arrivee, Vehicule vehicule, Utilisateur emetteur,
+                 Date horaire_depart, Date horaire_arrivee, int limite_places,
+                 boolean voyage_partitionner, Date date, float tarif_complet) {
+        this();
+        this.depart = depart;
+        this.arrivee = arrivee;
+        this.vehicule = vehicule;
+        this.emetteur = emetteur;
+        this.horaire_depart = horaire_depart;
+        this.horaire_arrivee = horaire_arrivee;
+        this.limite_places = limite_places;
+        this.voyage_partitionner = voyage_partitionner;
+        this.date = date;
+        this.tarif_complet = tarif_complet;
     }
 
-    public int getNbrRestants() {
-        return nbrRestants;
+    public int getId_offre() {
+        return id_offre;
     }
 
-    public void setNbrRestants(int nbrRestants) {
-        this.nbrRestants = nbrRestants;
+    public void setId_offre(int id_offre) {
+        this.id_offre = id_offre;
+    }
+
+    public int getLimite_places() {
+        return limite_places;
+    }
+
+    public void setLimite_places(int limite_places) {
+        this.limite_places = limite_places;
     }
 
     public Ville getDepart() {
@@ -50,12 +87,12 @@ public class Offre {
         this.depart = depart;
     }
 
-    public Ville getArrive() {
-        return arrive;
+    public Ville getArrivee() {
+        return arrivee;
     }
 
-    public void setArrive(Ville arrive) {
-        this.arrive = arrive;
+    public void setArrivee(Ville arrivee) {
+        this.arrivee = arrivee;
     }
 
     public Vehicule getVehicule() {
@@ -74,19 +111,75 @@ public class Offre {
         this.etapes = etapes;
     }
 
-    public Utilisateur getEmmeteur() {
-        return emmeteur;
+    public Utilisateur getEmetteur() {
+        return emetteur;
     }
 
-    public void setEmmeteur(Utilisateur emmeteur) {
-        this.emmeteur = emmeteur;
+    public void setEmetteur(Utilisateur emetteur) {
+        this.emetteur = emetteur;
     }
 
-    public Float getTarif() {
+    public Set<Float> getTarif() {
         return tarif;
     }
 
-    public void setTarif(Float tarif) {
+    public void setTarif(Set<Float> tarif) {
         this.tarif = tarif;
+    }
+
+    public boolean isVoyage_partitionner() {
+        return voyage_partitionner;
+    }
+
+    public void setVoyage_partitionner(boolean voyage_partitionner) {
+        this.voyage_partitionner = voyage_partitionner;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Set<Date> getHoraire() {
+        return horaire;
+    }
+
+    public void setHoraire(Set<Date> horaire) {
+        this.horaire = horaire;
+    }
+
+    public List<Demande> getDemandes() {
+        return demandes;
+    }
+
+    public void setDemandes(List<Demande> demandes) {
+        this.demandes = demandes;
+    }
+
+    public Date getHoraire_depart() {
+        return horaire_depart;
+    }
+
+    public void setHoraire_depart(Date horaire_depart) {
+        this.horaire_depart = horaire_depart;
+    }
+
+    public Date getHoraire_arrivee() {
+        return horaire_arrivee;
+    }
+
+    public void setHoraire_arrivee(Date horaire_arrivee) {
+        this.horaire_arrivee = horaire_arrivee;
+    }
+
+    public float getTarif_complet() {
+        return tarif_complet;
+    }
+
+    public void setTarif_complet(float tarif_complet) {
+        this.tarif_complet = tarif_complet;
     }
 }
